@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<article>
+  <h2>{{curr_article.name}}</h2>
+  <hr />
+  <img src="{{curr_article.imageUrl}}" />
+  <h6>Source:NEWS BULLETIN</h6>
+  <h6>Update:08 July 2024 | 08.06 AM IST</h6>
+  <p>{{curr_article.content}}</p>
+</article>
+<link rel="stylesheet" href="{% static 'css/style2.css' %}" />
+{% endblock content %}

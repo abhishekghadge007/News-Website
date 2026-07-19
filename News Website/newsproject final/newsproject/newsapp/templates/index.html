@@ -1,0 +1,257 @@
+{% extends 'base.html '%} {% load static %} {% block content %}
+<main>
+  <div class="card-container">
+    {% for article in article_list %}
+    <div class="card">
+      <img src="{{article.imageUrl}}" id="image" />
+      <div class="card-content">
+        <h3 id="title">{{article.title}}</h3>
+        <p id="description">{{article.short_desc}}</p>
+        <a href="{% url 'newsdetail' id=article.id %}" class="btn">READ MORE</a>
+      </div>
+    </div>
+    {% endfor %}
+    <!-- <div class="card">
+          <img
+            src="/News management project/PROJECT/IMAGES/INDIA.jpeg"
+            id="image"
+          />
+          <div class="card-content">
+            <h3 id="title">
+              Earthquake of 4.5 magnitude strikes Maharashtra's Hingoli
+            </h3>
+            <p id="description">
+              An earthquake of 4.5 magnitude hit Maharashtra's Hingoli on
+              Wednesday morning and its impact was also felt in Nanded,
+              Parbhani, Chhatrapati Sambhajinagar and Washim districts,
+              officials said.
+            </p>
+            <a
+              href="/News management project/PROJECT/HTML FILE/india.html"
+              class="btn"
+              >READ MORE</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="/News management project/PROJECT/IMAGES/WORLD.webp"
+            id="image"
+          />
+          <div class="card-content">
+            <h3 id="title">
+              PM Modi Hugs Putin On Russia Visit, Tea Meet At His Home
+            </h3>
+            <p id="description">
+              Moscow: Prime Minister Narendra Modi flew into Moscow on Monday
+              and warmly hugged President Vladimir Putin on a visit that treads
+              a fine line between maintaining a longstanding relationship with
+              Moscow and courting closer Western security ties.
+            </p>
+            <a
+              href="/News management project/PROJECT/HTML FILE/world.html"
+              class="btn"
+              >READ MORE</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="/News management project/PROJECT/IMAGES/SPORTS.webp"
+            id="image"
+          />
+          <div class="card-content">
+            <h3 id="title">Gautam Gambhir appointed Team India head coach</h3>
+            <p id="description">
+              NEW DELHI: Former opener Gautam Gambhir has been appointed as Team
+              India head coach, confirmed BCCI secretary Jay Shah on Tuesday.
+            </p>
+            <a
+              href="/News management project/PROJECT/HTML FILE/sports.html"
+              class="btn"
+              >READ MORE</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="/News management project/PROJECT/IMAGES/HEALTH.png"
+            id="image"
+          />
+          <div class="card-content">
+            <h3 id="title">
+              Two pregnant women among 9 new cases of Zika virus in Pune
+            </h3>
+            <p id="description">
+              Pune has seen an uptick in cases of Zika virus, recording nine new
+              infections in the past one week. Two pregnant women are among the
+              nine new cases recorded in the city.
+            </p>
+            <a
+              href="/News management project/PROJECT/HTML FILE/health.html"
+              class="btn"
+              >READ MORE</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="/News management project/PROJECT/IMAGES/SCI&TECH.avif"
+            id="image"
+          />
+          <div class="card-content">
+            <h3 id="title">
+              Oppo Reno 12 series confirmed to launch in India on July 12
+            </h3>
+            <p id="description">
+              Oppo has announced the launch of its flagship Reno 12 series in
+              India on July 12. The company has also been teasing various
+              built-in AI features for the phones.
+            </p>
+            <a
+              href="/News management project/PROJECT/HTML FILE/sci&tech.html"
+              class="btn"
+              >READ MORE</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="/News management project/PROJECT/IMAGES/FINANCE.avif"
+            id="image"
+          />
+          <div class="card-content">
+            <h3 id="title">
+              Adi-Nadir Godrej family buys stake worth Rs 3,803 crore in Godrej
+              Industries
+            </h3>
+            <p id="description">
+              The Adi-Nadir Godrej family has acquired a 12.65 per cent stake
+              worth Rs 3,803 crore from RKN Enterprises in Godrej Industries,
+              the flagship of the group. RKN Industries is owned by Rishad K
+              Naoroji, a cousin of Adi Godrej, and others.
+            </p>
+            <a
+              href="/News management project/PROJECT/HTML FILE/finance.html"
+              class="btn"
+              >READ MORE</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="/News management project/PROJECT/IMAGES/EDUCATION.jpg"
+            id="image"
+          />
+          <div class="card-content">
+            <h3 id="title">
+              Maharashtra announces free higher education policy for EWS, SEBC,
+              OBC girls
+            </h3>
+            <p id="description">
+              The cabinet led by Chief Minister Eknath Shinde issued a
+              government resolution (GR) on Monday, mentioning that the
+              objective is to increase the number of girls pursuing professional
+              courses under the National Education Policy (NEP).
+            </p>
+            <a
+              href="/News management project/PROJECT/HTML FILE/education.html"
+              class="btn"
+              >READ MORE</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="/News management project/PROJECT/IMAGES/WEATHER.avif"
+            id="image"
+          />
+          <div class="card-content">
+            <h3 id="title">
+              Weather updates: Red alert in Goa; heavy rain likely in Delhi, 10
+              other states
+            </h3>
+            <p id="description">
+              IMD issued a red alert for Goa and Mumbai, while an orange alert
+              was issued for states such as Karnataka, Assam and more amid heavy
+              rainfall.
+            </p>
+            <a
+              href="/News management project/PROJECT/HTML FILE/weather.html"
+              class="btn"
+              >READ MORE</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="/News management project/PROJECT/IMAGES/ENTERTAINMENT.webp"
+            id="image"
+          />
+          <div class="card-content">
+            <h3 id="title">
+              Kalki 2898 AD Box Office Collection Day 13: Prabhas' Film Records
+              Lowest-Ever Collection Since Its Release
+            </h3>
+            <p id="description">
+              New Delhi: Kalki 2898 AD has been ruling the box office and how.
+              Nag Ashwin's 3D sci-fi film has minted ₹ 9 crore nett in India on
+              Day 13 of its release, as per Sacnilk. This brings the total
+              collection in India to ₹ 529.45 crore.
+            </p>
+            <a
+              href="/News management project/PROJECT/HTML FILE/entertainment.html"
+              class="btn"
+              >READ MORE</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="/News management project/PROJECT/IMAGES/TRAVEL.webp"
+            id="image"
+          />
+          <div class="card-content">
+            <h3 id="title">
+              Etihad to step-up North America services this winter
+            </h3>
+            <p id="description">
+              Etihad will expand services to North America this October with
+              plans to increase flight frequencies on its Abu Dhabi-Boston
+              route. The carrier will also begin operating its new Airbus A350
+              aircraft on daily flights to Toronto in the upcoming winter
+              season.
+            </p>
+            <a
+              href="/News management project/PROJECT/HTML FILE/travel.html"
+              class="btn"
+              >READ MORE</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="/News management project/PROJECT/IMAGES/CRIME.jpg"
+            id="image"
+          />
+          <div class="card-content">
+            <h3 id="title">
+              Uttar Pradesh: 15-year-old boy arrested for killing father, mother
+              and brother in Ghazipur
+            </h3>
+            <p id="description">
+              The Ghazipur Police have arrested a 15-year-old boy, who confessed
+              to killing his parents and brother, for opposing his marriage with
+              the girl he was in love with for the last two years, the police
+              said.
+            </p>
+            <a
+              href="/News management project/PROJECT/HTML FILE/crime.html"
+              class="btn"
+              >READ MORE</a
+            >
+          </div>
+        </div> -->
+  </div>
+</main>
+{% endblock content %}
