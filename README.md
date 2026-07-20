@@ -33,3 +33,6 @@ Open:
 ## Purpose
 
 This project was created to learn Django concepts such as URL routing, views, templates, models, and database operations.
+
+## Developed By
+**Abhishek Ghadge**
